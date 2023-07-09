@@ -1,0 +1,136 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Panel = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local Execute = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(84, 255, 55)
+Main.BorderColor3 = Color3.fromRGB(179, 179, 179)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.337674439, 0, 0.300283283, 0)
+Main.Size = UDim2.new(0, 541, 0, 281)
+
+UICorner.Parent = Main
+
+Panel.Name = "Panel"
+Panel.Parent = Main
+Panel.BackgroundColor3 = Color3.fromRGB(46, 145, 44)
+Panel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Panel.BorderSizePixel = 0
+Panel.Size = UDim2.new(0, 541, 0, 39)
+
+UICorner_2.Parent = Panel
+
+Title.Name = "Title"
+Title.Parent = Panel
+Title.BackgroundColor3 = Color3.fromRGB(184, 148, 53)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.195933461, 0, 0.0512820482, 0)
+Title.Size = UDim2.new(0, 348, 0, 37)
+Title.Font = Enum.Font.FredokaOne
+Title.Text = "VRALE EXECUTOR"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextScaled = true
+Title.TextSize = 26.000
+Title.TextWrapped = true
+
+TextBox.Parent = Panel
+TextBox.BackgroundColor3 = Color3.fromRGB(191, 251, 165)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.110905729, 0, 1.46153831, 0)
+TextBox.Size = UDim2.new(0, 420, 0, 185)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "VRALE ON TOP           Enter a lua script"
+TextBox.TextColor3 = Color3.fromRGB(0, 163, 7)
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner_3.Parent = TextBox
+
+Execute.Name = "Execute"
+Execute.Parent = Panel
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BackgroundTransparency = 1.000
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0, 0, 6.20512819, 0)
+Execute.Size = UDim2.new(0, 200, 0, 39)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextScaled = true
+Execute.TextSize = 14.000
+Execute.TextWrapped = true
+
+UICorner_4.Parent = Execute
+
+Clear.Name = "Clear"
+Clear.Parent = Panel
+Clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Clear.BackgroundTransparency = 1.000
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.617375255, 0, 6.20512819, 0)
+Clear.Size = UDim2.new(0, 200, 0, 39)
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextScaled = true
+Clear.TextSize = 14.000
+Clear.TextWrapped = true
+
+UICorner_5.Parent = Clear
+
+-- Scripts:
+
+local function XEEGSY_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbot = script.Parent.Parent.TextBox
+	button.MouseButton1Click:Connect(function()
+		loadstring(TextBox.Text)()
+	end)
+end
+coroutine.wrap(XEEGSY_fake_script)()
+local function ECTBDBU_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
+
+	local button = script.Parent
+	local textbot = script.Parent.Parent.TextBox
+	button.MouseButton1Click:Connect(function()
+		textbot.Text = ""
+	end)
+end
+coroutine.wrap(ECTBDBU_fake_script)()
+local function UFWJXVT_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.Draggable = true 
+	script.Parent.Active = true
+end
+coroutine.wrap(UFWJXVT_fake_script)()
+local function JVQECUU_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character or Player.CharacterAdded:Wait()
+end
+coroutine.wrap(JVQECUU_fake_script)()
